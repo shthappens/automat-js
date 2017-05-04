@@ -36,10 +36,6 @@ let text = "";
 
 // Part 3
 
-for (i = 0; i < dishesArray.length; i++) {
-  text += dishesArray[i];
-}
-
 let mainDiv = document.getElementById('main');
 
 dishesArray.forEach((dish) => {
