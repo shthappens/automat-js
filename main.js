@@ -12,9 +12,24 @@ let text = "";
 
 // Part 1
 
+// for (i = 0; i < dishesArray.length; i++) {
+//   text += "<div class='food-item'>" + dishesArray[i] + "</div>";
+// }
+//
+// let display = document.getElementById('main');
+//   display.innerHTML = text;
+
+// Part 2
+
 for (i = 0; i < dishesArray.length; i++) {
-  text += "<div class='food-item'>" + dishesArray[i] + "</div>";
+  text += dishesArray[i];
 }
 
-let display = document.getElementById('main');
-  display.innerHTML = text;
+let mainDiv = document.getElementById('main');
+
+dishesArray.forEach((dish) => {
+  let foodItemDiv = document.createElement('div');
+  foodItemDiv.className = 'food-item';
+  foodItemDiv.innerHTML = dish;
+  mainDiv.appendChild(foodItemDiv);
+});
