@@ -21,6 +21,21 @@ let text = "";
 
 // Part 2
 
+// for (i = 0; i < dishesArray.length; i++) {
+//   text += dishesArray[i];
+// }
+//
+// let mainDiv = document.getElementById('main');
+//
+// dishesArray.forEach((dish) => {
+//   let foodItemDiv = document.createElement('div');
+//   foodItemDiv.className = 'food-item';
+//   foodItemDiv.innerHTML = dish;
+//   mainDiv.appendChild(foodItemDiv);
+// });
+
+// Part 3
+
 for (i = 0; i < dishesArray.length; i++) {
   text += dishesArray[i];
 }
@@ -30,6 +45,9 @@ let mainDiv = document.getElementById('main');
 dishesArray.forEach((dish) => {
   let foodItemDiv = document.createElement('div');
   foodItemDiv.className = 'food-item';
+  foodItemDiv.addEventListener('click', () => {
+    foodItemDiv.className += ' hidden';
+  });
   foodItemDiv.innerHTML = dish;
   mainDiv.appendChild(foodItemDiv);
 });
